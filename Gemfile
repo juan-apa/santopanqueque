@@ -3,8 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.2'
 
-gem 'activeadmin', '~> 2.8'
+gem 'activeadmin', '~> 2.9'
 gem 'bootsnap', '>= 1.4.4', require: false
+gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'figaro', '~> 1.2'
 gem 'pg', '~> 1.2', '>= 1.2.3'
 gem 'puma', '~> 5.0'
