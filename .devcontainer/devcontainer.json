@@ -25,7 +25,16 @@
 	},
 
 	// Add the IDs of extensions you want installed when the container is created.
-	"extensions": []
+	"extensions": [
+		"eamodio.gitlens",
+		"mashduek.jbuilder-highlight",
+		"rebornix.ruby",
+		"misogi.ruby-rubocop",
+		"bung87.rails",
+		"castwide.solargraph",
+		"actboy168.tasks",
+		"kaiwood.endwise"
+	]
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
