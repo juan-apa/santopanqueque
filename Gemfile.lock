@@ -285,7 +285,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin (~> 2.9)
-  bootsnap (>= 1.4.4)
+  bootsnap (~> 1.5, >= 1.5.1)
   byebug
   capybara (>= 3.26)
   devise (~> 4.7, >= 4.7.3)
