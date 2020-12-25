@@ -27,11 +27,18 @@ ADD Gemfile.lock ./
 RUN bundle install
 
 ADD package.json yarn.lock ./
-RUN yarn install --check-files
+RUN yarn install
 
 ADD . $APP_HOME
 
+RUN bundle exec rails assets:precompile
+
+COPY entrypoint.sh /usr/bin/
+
+RUN chmod +x /usr/bin/entrypoint.sh
+
+ENTRYPOINT ["entrypoint.sh"]
+
 EXPOSE 3000
 
-CMD bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -b 0.0.0.0 -p 3000"
-
+CMD ["rails", "server", "-b", "0.0.0.0"]
